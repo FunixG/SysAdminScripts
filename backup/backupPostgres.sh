@@ -3,7 +3,7 @@
 BACKUP_NAME="$(date +'%d-%m-%Y_%H:%M:%S')"
 
 #Delete older backup of 15 days
-find "$PATH_NAS_BACKUP/backup-db" -type f -mtime +15 -delete
+find "$PATH_NAS_BACKUP/backup-db" -type f -mtime +60 -delete
 
 #Create backup for postgresql databases
 PGPASSWORD=$PGPASSWORD_FUNIXPROD pg_dump -h "$POSTGRESQL_FUNIXPROD_ADDRESS" -p "$POSTGRESQL_FUNIXPROD_PORT" -U "$POSTGRESQL_FUNIXPROD_USER" -d funixproductions_db | zip > "$PATH_NAS_BACKUP/backup-db/postgresql-funixproductions-$BACKUP_NAME.zip"
