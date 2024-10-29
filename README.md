@@ -24,4 +24,7 @@ export PGPASSWORD_PACIFISTA="password"
 export POSTGRESQL_PACIFISTA_ADDRESS="10.0.0.1"
 export POSTGRESQL_PACIFISTA_PORT="2020"
 export POSTGRESQL_PACIFISTA_USER="user"
+
+#For discord notifications
+export DISCORD_ALERTS_CHANNEL_WEBHOOK_URL="https://discord.com/api/webhooks/xxxxxx/xxxxxx"
 ````
